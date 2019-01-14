@@ -1,13 +1,14 @@
 package com.maple.customview.view;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.maple.customview.R;
 
 /**
  * 自定义View继承View时，注意事项⚠️
@@ -28,6 +29,9 @@ public class RectView extends View {
 
     public RectView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RectView);
+        mColor = typedArray.getColor(R.styleable.RectView_rect_color, mColor);// 获取自定义属性值
+        typedArray.recycle();// 及时回收资源
         initDraw();
     }
 
