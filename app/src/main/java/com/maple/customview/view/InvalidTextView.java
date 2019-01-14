@@ -9,6 +9,8 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
+ * 自定义View
+ *
  * @author maple
  * @time 2019/1/14
  */
