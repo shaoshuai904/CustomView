@@ -43,6 +43,6 @@ public class InvalidTextView extends TextView {
         super.onDraw(canvas);
         int width = getWidth();
         int height = getHeight();
-        canvas.drawLine(0, height / 2, width, height / 2, mPaint);
+        canvas.drawLine(0, height >> 1, width, height >> 1, mPaint);
     }
 }
