@@ -42,8 +42,11 @@ public class DragView extends View {
                 int offsetX = x - lastX;
                 int offsetY = y - lastY;
                 // 调用layout方法，重新放置
-                layout(getLeft() + offsetX, getTop() + offsetY,
-                        getRight() + offsetX, getBottom() + offsetY);
+//                layout(getLeft() + offsetX, getTop() + offsetY,
+//                        getRight() + offsetX, getBottom() + offsetY);
+                // 另一种写法
+                offsetLeftAndRight(offsetX);
+                offsetTopAndBottom(offsetY);
                 break;
             case MotionEvent.ACTION_UP:
                 break;
