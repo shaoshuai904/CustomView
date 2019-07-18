@@ -32,7 +32,10 @@
                 android:layout_height="80dp"
                 android:background="#abcdef"
                 android:minWidth="150dp"
-                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="120dp"
+                android:paddingBottom="15dp"
                 app:rect_color="#00ffff" />
 
             <TextView
