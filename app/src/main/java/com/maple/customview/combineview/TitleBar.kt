@@ -40,8 +40,16 @@ class TitleBar : RelativeLayout {
         tvTitle.text = title
     }
 
+    fun setLeftButtonText(title: CharSequence) {
+        tvLeft.text = title
+    }
+
     fun setOnLeftButtonClickListener(listener: OnClickListener) {
         tvLeft.setOnClickListener(listener)
+    }
+
+    fun setRightButtonText(title: CharSequence) {
+        tvRight.text = title
     }
 
     fun setOnRightButtonClickListener(listener: OnClickListener) {
