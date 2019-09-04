@@ -30,14 +30,13 @@ class RectView : View {
         initDraw()
     }
 
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
+    constructor(context: Context, attrs: AttributeSet) : this(context, attrs, 0)
+
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.RectView)
         mColor = typedArray.getColor(R.styleable.RectView_rect_color, mColor)// 获取自定义属性值
         typedArray.recycle()// 及时回收资源
-        initDraw()
-    }
 
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         initDraw()
     }
 
