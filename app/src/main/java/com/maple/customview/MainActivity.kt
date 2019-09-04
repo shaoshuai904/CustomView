@@ -54,11 +54,11 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun getTestData(): List<ValuePackBean> {
+    private fun getTestData(): List<ValuePackBean> {
         return arrayListOf(
-                ValuePackBean("单次", "0.01", "0.01", 2),
-                ValuePackBean("包月", "0.02", "0.02", 30),
-                ValuePackBean("俩月", "0.03", "0.03", 60)
+                ValuePackBean("单次", 0.01F, 0.01F, 2),
+                ValuePackBean("包月", 0.02F, 0.02F, 30),
+                ValuePackBean("俩月", 0.03F, 0.03F, 60)
         )
     }
 

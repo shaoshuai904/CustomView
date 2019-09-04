@@ -45,8 +45,8 @@ class ValuePackAdapter(val mContext: Context)
 
 data class ValuePackBean(
         var type: String,
-        var newValue: String,
-        var oldValue: String,
+        var newValue: Float,
+        var oldValue: Float,
         var time: Int = 0
 ) : Serializable
 

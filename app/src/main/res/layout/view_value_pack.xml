@@ -31,7 +31,7 @@
             android:textSize="16sp"
             tool:text="¥ 0.01" />
 
-        <TextView
+        <com.maple.customview.view.InvalidTextView
             android:id="@+id/tv_old_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
