@@ -17,6 +17,12 @@ import java.io.Serializable
  */
 class ValuePackAdapter(val mContext: Context)
     : BaseQuickAdapter<ValuePackBean, RecyclerView.ViewHolder>() {
+    var curSelect: ValuePackBean? = null
+
+    fun updateCurrentSelectItem(index: Int) {
+        curSelect = getItem(index)
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding = DataBindingUtil.inflate<ViewValuePackBinding>(
@@ -38,6 +44,8 @@ class ValuePackAdapter(val mContext: Context)
                 tvNewValue.text = "¥ ${item.newValue}"
                 tvOldValue.text = "¥ ${item.oldValue}"
                 tvTime.text = "有效时间${item.time}天"
+
+                llViewRoot.isSelected = (curSelect == item)
             }
         }
     }
@@ -48,6 +56,31 @@ data class ValuePackBean(
         var newValue: Float,
         var oldValue: Float,
         var time: Int = 0
-) : Serializable
+) : Serializable {
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as ValuePackBean
+
+        if (type != other.type) return false
+        if (newValue != other.newValue) return false
+        if (oldValue != other.oldValue) return false
+        if (time != other.time) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = type.hashCode()
+        result = 31 * result + newValue.hashCode()
+        result = 31 * result + oldValue.hashCode()
+        result = 31 * result + time
+        return result
+    }
+
+
+}
 
 

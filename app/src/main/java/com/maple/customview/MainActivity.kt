@@ -22,12 +22,11 @@ class MainActivity : AppCompatActivity() {
         ValuePackAdapter(this).apply {
             onItemClickListener = object : BaseQuickAdapter.OnItemClickListener {
                 override fun onItemClick(view: View, position: Int) {
-
+                    updateCurrentSelectItem(position)
                 }
             }
         }
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         valuePackAdapter.refreshData(getTestData())
+        valuePackAdapter.updateCurrentSelectItem(0)// 默认选中
     }
 
 
