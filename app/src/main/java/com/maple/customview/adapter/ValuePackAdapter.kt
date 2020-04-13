@@ -34,7 +34,7 @@ class ValuePackAdapter(val mContext: Context)
         (holder as ValuePackViewHolder).bind(getItem(position))
     }
 
-    inner class ValuePackViewHolder(val binding: ViewValuePackBinding)
+    inner class ValuePackViewHolder(private val binding: ViewValuePackBinding)
         : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: ValuePackBean) {
