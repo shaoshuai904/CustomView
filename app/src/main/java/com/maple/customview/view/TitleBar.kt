@@ -1,4 +1,4 @@
-package com.maple.customview.combineview
+package com.maple.customview.view
 
 import android.content.Context
 import android.util.AttributeSet

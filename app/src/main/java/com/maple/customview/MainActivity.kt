@@ -37,7 +37,7 @@ class MainActivity : FragmentActivity() {
                 setTitle("new Title")
                 setLeftButtonText("Back")
                 setOnLeftButtonClickListener(View.OnClickListener {
-                    Toast.makeText(this@MainActivity, "back", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(mContext, "back", Toast.LENGTH_SHORT).show()
                 })
             }
             //

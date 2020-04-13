@@ -10,13 +10,12 @@ import com.maple.customview.databinding.ViewValuePackBinding
 import java.io.Serializable
 
 /**
- * https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+ * 续费价值包Adapter
  *
  * @author maple
  * @time 2019-08-06
  */
-class ValuePackAdapter(val mContext: Context)
-    : BaseQuickAdapter<ValuePackBean, RecyclerView.ViewHolder>() {
+class ValuePackAdapter(val mContext: Context) : BaseQuickAdapter<ValuePackBean, RecyclerView.ViewHolder>() {
     var curSelect: ValuePackBean? = null
 
     fun updateCurrentSelectItem(index: Int) {
@@ -25,7 +24,7 @@ class ValuePackAdapter(val mContext: Context)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = DataBindingUtil.inflate<ViewValuePackBinding>(
+        val binding: ViewValuePackBinding = DataBindingUtil.inflate(
                 LayoutInflater.from(mContext), R.layout.view_value_pack, parent, false)
         return ValuePackViewHolder(binding)
     }
@@ -34,7 +33,7 @@ class ValuePackAdapter(val mContext: Context)
         (holder as ValuePackViewHolder).bind(getItem(position))
     }
 
-    inner class ValuePackViewHolder(private val binding: ViewValuePackBinding)
+    inner class ValuePackViewHolder(val binding: ViewValuePackBinding)
         : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: ValuePackBean) {
@@ -56,31 +55,5 @@ data class ValuePackBean(
         var newValue: Float,
         var oldValue: Float,
         var time: Int = 0
-) : Serializable {
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as ValuePackBean
-
-        if (type != other.type) return false
-        if (newValue != other.newValue) return false
-        if (oldValue != other.oldValue) return false
-        if (time != other.time) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        var result = type.hashCode()
-        result = 31 * result + newValue.hashCode()
-        result = 31 * result + oldValue.hashCode()
-        result = 31 * result + time
-        return result
-    }
-
-
-}
-
+) : Serializable
 
