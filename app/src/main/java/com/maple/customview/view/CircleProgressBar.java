@@ -43,7 +43,7 @@ public class CircleProgressBar extends ProgressBar {
         mReachedColor = Color.parseColor("#3171FE");
         mLineWidth = DensityUtils.dp2px(context, 3f);
         mInterSize = DensityUtils.dp2px(context, 22f);
-        mInterDrawable = context.getResources().getDrawable(R.drawable.svg_download_pause);
+        mInterDrawable = ContextCompat.getDrawable(context, R.drawable.svg_download_pause);
         setPaint();
     }
 

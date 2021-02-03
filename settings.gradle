@@ -1,1 +1,2 @@
+rootProject.name='自定义View'
 include ':app'

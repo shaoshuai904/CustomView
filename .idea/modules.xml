@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CustomView.iml" filepath="$PROJECT_DIR$/CustomView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/CustomView-app.iml" filepath="$PROJECT_DIR$/app/CustomView-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GitHub-CustomView.iml" filepath="$PROJECT_DIR$/GitHub-CustomView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/自定义View.iml" filepath="$PROJECT_DIR$/.idea/modules/自定义View.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/自定义View.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/自定义View.app.iml" />
     </modules>
   </component>
 </project>
